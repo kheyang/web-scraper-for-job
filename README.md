@@ -1,9 +1,9 @@
 # Web Scraping Using Beautiful Soup - Static Website
 
-## Beautiful Soup Documentation:
+Beautiful Soup Documentation:
 https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 
-### Part 1: Inspect your Data Source
+Part 1: Inspect your Data Source
 
 1.1	Explore the Website
 	
