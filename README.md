@@ -3,17 +3,20 @@
 ## Beautiful Soup Documentation:
 https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 
-### Part 1: Inspect your Data Source
+## Part 1: Inspect your Data Source
 
-1.1	Explore the Website
+### 1.1	Explore the Website
 	
-1.2	Decipher the Information in URLs
+### 1.2	Decipher the Information in URLs
 
-Example: https://www.monster.com/jobs/search/?q=Software-Developer&where=Australia
-Base URL: represents the path to the search functionality of the website :: https://www.monster.com/jobs/search/
-Query parameters: represent additional values that can be declared on the page :: ?q=Software-Developer&where=Australia
+Example: 
+'https://www.monster.com/jobs/search/?q=Software-Developer&where=Australia'
+Base URL: represents the path to the search functionality of the website
+'https://www.monster.com/jobs/search/'
+Query parameters: represent additional values that can be declared on the page
+'?q=Software-Developer&where=Australia'
 	
-1.3	Understand the Query Parameters
+### 1.3	Understand the Query Parameters
 	
 Query parameters generally consist of 3 things:
  a) Start: The beginning of the query parameters is denoted by a question mark (?)	
