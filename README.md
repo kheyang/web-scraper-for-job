@@ -6,7 +6,9 @@ https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 ## Part 1: Inspect your Data Source
 
 ### 1.1	Explore the Website
-	
+
+https://www.monster.com/jobs/search
+
 ### 1.2	Decipher the Information in URLs
 
 Example: https://www.monster.com/jobs/search/?q=Software-Developer&where=Australia
@@ -97,23 +99,27 @@ Instead of printing out all of the jobs from the page, you’ll first filter the
 
 Job titles in the page are kept within <h2> elements
 
-To filter only specific jobs, can use the string argument:
-	$ python_jobs = results.find_all('h2', string='Python Developer')
+To filter only specific jobs, can use the string argument: 
+python_jobs = results.find_all('h2', string='Python Developer')
 
 However, when you use string= like you did above, your program looks for exactly that string. Any differences in capitalization or whitespace will prevent the element from matching.
 
 ### 4.2	Pass a Function to a Beautiful Soup Method
 
-$ python_jobs = results.find_all('h2', string=lambda text: 'python' in text.lower())
+python_jobs = results.find_all('h2', string=lambda text: 'python' in text.lower())
 
 Now you’re passing an anonymous function to the string= argument. The lambda function looks at the text of each <h2> element, converts it to lowercase, and checks whether the substring 'python' is found anywhere in there. 
 	
-4.3 	Extract Attributes fromm HTML Elements
+### 4.3 	Extract Attributes fromm HTML Elements
 	
 At this point, the script already scrapes the site and filters its HTML for relevant job postings
+
 One thing that’s still missing is the link to apply for a job
+
 The current code strips away the entire link when accessing the .text attribute of its parent element
+
 To get the actual URL, you want to extract one of those attributes instead of discarding it
+
 The URL is contained in the href attribute of the nested <a> tag
 
 ## Conclusion
@@ -127,4 +133,6 @@ Learned how to:
 3) Download the page’s HTML content using Python’s requests library
 4) Parse the downloaded HTML with Beautiful Soup to extract relevant information
 
-Source: https://realpython.com/beautiful-soup-web-scraper-python/	
+## Source
+
+https://realpython.com/beautiful-soup-web-scraper-python/	
