@@ -22,13 +22,13 @@ Part 1: Inspect your Data Source
 
 1.4 	Inspect the Site Using Developer Tools
 	
-	Understand the page structure to pick what you want from the HTML response that you’ll collect
+	Understand the page structure to pick what you want from the HTML response that youâ€™ll collect
 
 Part 2: Scrape HTML Content From a Page
 
-2.1	Get Site’s HTML Code into Python Script
+2.1	Get Siteâ€™s HTML Code into Python Script
 	
-	Use Python’s requests library :: pip install requests
+	Use Pythonâ€™s requests library :: pip install requests
 
 2.2	Performs HTTP Request to an URL
 	
@@ -69,7 +69,7 @@ Part 3: Parse HTML Code with Beautiful Soup
 	Add .text to a Beautiful Soup object to return only the text content of the HTML elements that the object contains
 	Add .strip() to clear up white spaces
 
-*****	The web is messy and you can’t rely on a page structure to be consistent throughout. Therefore, you’ll more often than not run into errors while parsing HTML.
+*****	The web is messy and you canâ€™t rely on a page structure to be consistent throughout. Therefore, youâ€™ll more often than not run into errors while parsing HTML.
 	AttributeError: 'NoneType' object has no attribute 'text'	
 	There could be an advertisement in there that displays in a different way than the normal job postings, which may return different results.
 
@@ -77,7 +77,7 @@ Part 4: Filter Only Specific Content
 
 4.1 	Filter Out Content of Interest
 	
-	Instead of printing out all of the jobs from the page, you’ll first filter them for some keywords
+	Instead of printing out all of the jobs from the page, youâ€™ll first filter them for some keywords
 	Job titles in the page are kept within <h2> elements
 	To filter only specific jobs, can use the string argument:
 	python_jobs = results.find_all('h2', string='Python Developer')
@@ -86,12 +86,12 @@ Part 4: Filter Only Specific Content
 4.2	Pass a Function to a Beautiful Soup Method
 
 	python_jobs = results.find_all('h2', string=lambda text: 'python' in text.lower())
-	Now you’re passing an anonymous function to the string= argument. The lambda function looks at the text of each <h2> element, converts it to lowercase, and checks whether the substring 'python' is found anywhere in there. 
+	Now youâ€™re passing an anonymous function to the string= argument. The lambda function looks at the text of each <h2> element, converts it to lowercase, and checks whether the substring 'python' is found anywhere in there. 
 	
 4.3 	Extract Attributes fromm HTML Elements
 	
 	At this point, the script already scrapes the site and filters its HTML for relevant job postings
-	One thing that’s still missing is the link to apply for a job
+	One thing thatâ€™s still missing is the link to apply for a job
 	The current code strips away the entire link when accessing the .text attribute of its parent element
 	To get the actual URL, you want to extract one of those attributes instead of discarding it
 	The URL is contained in the href attribute of the nested <a> tag
@@ -102,11 +102,9 @@ Learned how to scrape data from the Web using Python, requests, and Beautiful So
 Built a script that fetches job postings from the Internet and went through the full web scraping process from start to finish.
 
 Learned how to:
-1) Inspect the HTML structure of your target site with your browser’s developer tools
+1) Inspect the HTML structure of your target site with your browserâ€™s developer tools
 2) Gain insight into how to decipher the data encoded in URLs
-3) Download the page’s HTML content using Python’s requests library
+3) Download the pageâ€™s HTML content using Pythonâ€™s requests library
 4) Parse the downloaded HTML with Beautiful Soup to extract relevant information
 
-Source: https://realpython.com/beautiful-soup-web-scraper-python/
-
-	
+Source: https://realpython.com/beautiful-soup-web-scraper-python/	
