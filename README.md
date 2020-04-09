@@ -97,7 +97,7 @@ There could be an advertisement in there that displays in a different way than t
 	
 Instead of printing out all of the jobs from the page, you’ll first filter them for some keywords
 
-Job titles in the page are kept within <h2> elements
+Job titles in the page are kept within 'h2' elements
 
 To filter only specific jobs, can use the string argument: 
 python_jobs = results.find_all('h2', string='Python Developer')
@@ -108,7 +108,7 @@ However, when you use string= like you did above, your program looks for exactly
 
 python_jobs = results.find_all('h2', string=lambda text: 'python' in text.lower())
 
-Now you’re passing an anonymous function to the string= argument. The lambda function looks at the text of each <h2> element, converts it to lowercase, and checks whether the substring 'python' is found anywhere in there. 
+Now you’re passing an anonymous function to the string= argument. The lambda function looks at the text of each 'h2' element, converts it to lowercase, and checks whether the substring 'python' is found anywhere in there. 
 	
 ### 4.3 	Extract Attributes fromm HTML Elements
 	
